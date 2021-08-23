@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    android:background="@drawable/activity_background"
     android:orientation="vertical"
-    android:background="@drawable/activity_background">
+    tools:context=".MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,76 +22,79 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/bmi"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:src="@drawable/bmi" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="IMC"
                 android:gravity="center"
+                android:text="IMC"
+                android:textColor="@color/white"
                 android:textSize="30sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
+                android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/edit_text_peso"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Seu peso em Kg:"
-                android:background="@drawable/activity_edit_text"
-                android:padding="16dp"
                 android:layout_marginTop="32dp"
+                android:background="@drawable/activity_edit_text"
                 android:drawableStart="@drawable/touch"
                 android:drawablePadding="16dp"
                 android:drawableTint="@color/white"
+                android:hint="Seu peso em Kg:"
+                android:inputType="numberDecimal"
+                android:padding="16dp"
                 android:textColorHint="@color/white"
-                android:textSize="24sp"
-
-                android:inputType="numberDecimal"/>
+                android:textSize="24sp" />
 
             <EditText
+                android:id="@+id/edit_text_altura"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Sua altura em metros:"
-                android:background="@drawable/activity_edit_text"
-                android:padding="16dp"
                 android:layout_marginTop="16dp"
+                android:background="@drawable/activity_edit_text"
                 android:drawableStart="@drawable/carinha"
                 android:drawablePadding="16dp"
                 android:drawableTint="@color/white"
+                android:hint="Sua altura em metros:"
+                android:inputType="numberDecimal"
+                android:padding="16dp"
                 android:textColorHint="@color/white"
-                android:textSize="24sp"
-                android:inputType="numberDecimal"/>
+                android:textSize="24sp" />
+
             <Button
+                android:id="@+id/button_calcular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Calcular"
-                android:background="@drawable/activity_button"
                 android:layout_marginTop="25dp"
-                android:textSize="18sp"
+                android:background="@drawable/activity_button"
+                android:text="Calcular"
                 android:textColor="@color/white"
-                android:textStyle="bold"/>
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/text_view_resultado"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:text="0.0"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/resultado_background"
                 android:gravity="center"
                 android:textSize="48sp"
-                android:textStyle="bold"
-                android:layout_gravity="center"
-                android:background="@drawable/resultado_background"
-                android:layout_marginTop="32dp"/>
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/text_view_status"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Peso ideal"
-                android:gravity="center"
-                android:textSize="24sp"
-                android:textColor="@color/white"
                 android:layout_marginTop="4dp"
-                />
+                android:gravity="center"
+                android:text="Peso ideal"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
         </LinearLayout>
 
